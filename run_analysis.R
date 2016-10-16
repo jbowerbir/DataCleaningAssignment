@@ -47,7 +47,6 @@ trainData <- cbind(train_subj, train_label, train)
 fullData <- rbind(testData, trainData)
 
 
-
 ## Retain only variables pertaining to measurements of mean and st dev. Also
 ## include subject and activity IDs.
 
@@ -69,7 +68,6 @@ trimData <- fullData[, varKeep == TRUE]
 trimData$activityID <- factor(trimData$activityID, levels = c(1:6),
                               labels = activities[, 2])
   # This converts the activityID variable into a factor with descrptive labels.
-
 
 
 ## Creates a second, independent tidy data set with the average of each variable
