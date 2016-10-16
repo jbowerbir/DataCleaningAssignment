@@ -1,7 +1,7 @@
-# README file for run_anlysis.R and its attending data.
+## README file for run_anlysis.R and its attending data.
 
 
-## The code in "run_analysis.R" does the following:
+ The code in "run_analysis.R" does the following:
 
 1.  reads into R the "test" and "train" datsets as dataframes of the same names, 
     and reads in all corresponding infomration on subjects and the activities 
