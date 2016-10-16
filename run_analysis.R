@@ -35,7 +35,7 @@ colnames(train_subj) <- "subjectID"
 colnames(activities) <- c("activityCode", "activityName")
 
 
-## Merge the test and table datasets.
+## Merge the test and train datasets.
 
 ### Left column-bind the subjectIDs and activityIDs to the data.
   # Create the  full test dataset.
