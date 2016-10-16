@@ -1,10 +1,8 @@
 # Getting and Cleaning Data Course - Peer Review Assignment
 
 
-
 ## NOTE: This code assumes that you have the Samsung data  in your working 
 ## directory.
-
 
 
 ## Read the data, labels, and subjects into R.
@@ -23,7 +21,6 @@ features <- read.table("UCI HAR Dataset/features.txt", header = F)
 activities <- read.table("UCI HAR Dataset/activity_labels.txt", header = F)
 
 
-
 ## Name the test, train, and activity variables/columns.
 
 ### test data
@@ -36,7 +33,6 @@ colnames(train_label) <- "activityID"
 colnames(train_subj) <- "subjectID"
 ### activities
 colnames(activities) <- c("activityCode", "activityName")
-
 
 
 ## Merge the test and table datasets.
@@ -66,7 +62,6 @@ varKeep <- (grepl("subjectID" , names(fullData)) |
 trimData <- fullData[, varKeep == TRUE]
 
 
-
 ## Appropriately label the data set with descriptive variable names.
 
 ### Variable names are already descriptive, but we can be more descriptive in
@@ -77,14 +72,12 @@ trimData$activityID <- factor(trimData$activityID, levels = c(1:6),
 
 
 
-
 ## Creates a second, independent tidy data set with the average of each variable
 ## for each activity and each subject.
 
 ### aggregate() allows us to to summarize the data, finding the mean value of 
 ### each variable, for each combination of subjectID and activityID.
 tidyData <- aggregate(. ~ subjectID + activityID, data = trimData, mean)
-
 
 
 ## Save tidy dataset as a .txt file for upload to GitHub.
