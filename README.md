@@ -20,5 +20,5 @@ The code in "run_analysis.R" does the following:
 6.  exports the tidy dataset as "tidyData.txt".
 
 
-Note that the code in run_analysis.R assumes that you have the Samsung data in 
-already in your working directory.
+Note that the code in run_analysis.R **assumes** that you _alread have the Samsung 
+data in your working directory_.
